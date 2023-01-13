@@ -39,6 +39,9 @@ The game is built using Java and JavaFX, utilizing multithreading and socket pro
 - The game continues until all players have played their rounds.
 - Once the game is over, players can quit the game and return to the lobby.
 
+<img src="https://user-images.githubusercontent.com/80235009/212406588-5fd4666c-f36d-4c64-9004-99c00ba39d70.png" width="35%">
+</img> <img src="https://user-images.githubusercontent.com/80235009/212406590-61fec52d-ba8c-4ba7-b315-6892d245498f.png" width="35%"></img> 
+
 ## Future Improvements
 - Implement a scoring system to track player wins and losses
 - Allow players to customize their username
