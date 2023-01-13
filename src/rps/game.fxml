@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="mainGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="244.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 4.5;" vgap="6.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rps.GameController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TextField fx:id="myIpText" alignment="CENTER" editable="false" promptText="Your IP Address" style="-fx-border-color: black; -fx-border-width: 1.5;" GridPane.rowIndex="3" />
+        
+      <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="217.0" style="-fx-border-color: black; -fx-border-width: 1.5;" text="Username" textAlignment="CENTER" GridPane.rowIndex="2" />
+      
+      <HBox alignment="CENTER" prefWidth="159.0" spacing="12.0" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+         
+          <children>
+            <Label fx:id="scoreWinLabel" alignment="CENTER" contentDisplay="CENTER" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="|" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="scoreLossLabel" alignment="CENTER" contentDisplay="CENTER" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+         </children>       
+         
+         <GridPane.margin>
+            <Insets left="24.0" right="24.0" />
+         </GridPane.margin>
+         
+      </HBox>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="212.0" text="Score" GridPane.rowIndex="6">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      
+      <HBox fillHeight="false" spacing="12.0" GridPane.rowIndex="11" GridPane.vgrow="NEVER">
+        
+          <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="21.0" prefWidth="125.0" text="Round" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="roundNumberLabel" prefHeight="21.0" prefWidth="88.0" text=" 0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+         </children>
+         
+      </HBox>
+      
+        <HBox fillHeight="false" spacing="12.0" GridPane.rowIndex="12" GridPane.vgrow="NEVER" />
+      
+        <HBox alignment="CENTER" spacing="6.0" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+            
+         <children>
+            <Button fx:id="rockBtn" mnemonicParsing="false" onAction="#onMoveRockAction" style="-fx-border-color: black; -fx-border-width: 1.5; -fx-background-color: white;" text="Rock" />
+            <Button fx:id="paperBtn" mnemonicParsing="false" onAction="#onMovePaperAction" style="-fx-border-color: black; -fx-border-width: 1.5; -fx-background-color: white;" text="Paper" />
+            <Button fx:id="scissorsBtn" mnemonicParsing="false" onAction="#onMoveScissorsAction" style="-fx-border-color: black; -fx-border-width: 1.5; -fx-background-color: white;" text="Scissors" />
+         </children>
+         
+      </HBox>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="307.0" text="Log" GridPane.rowIndex="15">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      
+      <TextArea fx:id="logTextarea" editable="false" prefRowCount="3" promptText="&gt;. Match Log" style="-fx-border-color: black; -fx-border-width: 1.5;" GridPane.rowIndex="16">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      
+      <HBox fillHeight="false" prefWidth="244.0" spacing="12.0" GridPane.rowIndex="9">
+         <children>
+            <Label fx:id="LevelLabel" prefHeight="21.0" prefWidth="78.0" text="Match:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="level" text="0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="wins_label" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="130.0" text="Match's Won:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="wins" alignment="CENTER_RIGHT" text="0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="279.0" text="Rock, Paper &amp; Scissors" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="219.0" text="------------------------------" textAlignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="2.0" prefWidth="213.0" text="------------------------------" textAlignment="CENTER" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="219.0" text="--------------------------------------" textAlignment="CENTER" GridPane.rowIndex="8">
+         <font>
+            <Font size="13.5" />
+         </font>
+      </Label>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="219.0" text="--------------------------------------" textAlignment="CENTER" GridPane.rowIndex="10">
+         <font>
+            <Font size="13.5" />
+         </font>
+      </Label>
+      
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="23.0" prefWidth="202.0" text="Players joined:  " textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerCountLabel" prefHeight="23.0" prefWidth="97.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="1.0" prefWidth="213.0" text="------------------------------" textAlignment="CENTER" GridPane.rowIndex="14">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+    </children>
+   <padding>
+      <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+   </padding>
+</GridPane>
