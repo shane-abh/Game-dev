@@ -43,8 +43,6 @@ The game is built using Java and JavaFX, utilizing multithreading and socket pro
 </img> <img src="https://user-images.githubusercontent.com/80235009/212406590-61fec52d-ba8c-4ba7-b315-6892d245498f.png" width="35%"></img> 
 
 ### Future Improvements
-- Implement a scoring system to track player wins and losses
-- Allow players to customize their username
 - Implement a chat feature for players to communicate with each other during the game
 - Add support for more players in a single game
 - Add additional game modes, such as a tournament mode
